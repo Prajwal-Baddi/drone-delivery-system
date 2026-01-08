@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Live Demo | Drone Delivery System</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+    <!-- Project CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">🚁 Drone Delivery System</div>
+
+    <div class="nav-strip">
+        <a href="index.html">🏠 Home</a>
+        <a href="overview.html">📘 Overview</a>
+        <a href="algorithms.html">📊 Algorithms</a>
+        <a href="reflections.html">🧠 Reflections</a>
+        <a href="sdgs.html">🌍 SDGs</a>
+        <a href="demo.html" class="primary">🚀 Live Demo</a>
+    </div>
+</nav>
+
+
+
+
+
+<!-- TOP DASHBOARD -->
+<section class="top-dashboard">
+
+    <!-- CONTROL CENTER -->
+    <div class="card control-card">
+        <h2>⚙ Control Center</h2>
+
+        <label>Select Algorithm</label>
+        <select id="algorithm">
+            <option>Auto (AI)</option>
+            <option>Dijkstra</option>
+            <option>A*</option>
+            <option>BFS</option>
+            <option>DFS</option>
+            <option>Bellman-Ford</option>
+            <option>Floyd-Warshall</option>
+            <option>Prim</option>
+            <option>Kruskal</option>
+            <option>Bidirectional Dijkstra</option>
+            <option>Johnson</option>
+            <option>Ant Colony Optimization</option>
+            <option>Naive Greedy</option>
+        </select>
+
+        <button class="primary" onclick="computeRoute()">▶ Compute Route</button>
+        <button class="danger" onclick="resetMap()">⟳ Reset</button>
+    </div>
+
+    <!-- ROUTE ANALYSIS -->
+    <div class="card analysis-card">
+        <h2>📈 Route Analysis</h2>
+
+        <div class="metric"><span>Algorithm Used</span><b id="algoName">—</b></div>
+        <div class="metric"><span>Total Distance</span><b id="distance">—</b></div>
+        <div class="metric"><span>Delivery Points</span><b id="points">—</b></div>
+
+        <div class="divider"></div>
+
+        <div class="metric"><span>Iterations</span><b id="iterations">—</b></div>
+        <div class="metric"><span>Time Complexity</span><b id="complexity">—</b></div>
+    </div>
+
+    <!-- AI RECOMMENDATION -->
+    <div class="card recommendation-card">
+        <h2>🤖 AI Recommendation</h2>
+        <div class="glow-box">
+            <h3 id="bestAlgo">—</h3>
+        </div>
+        <p id="bestReason"></p>
+        <p id="aiExplanation"></p>
+    </div>
+
+</section>
+
+<!-- MAP -->
+<div id="map"></div>
+
+<!-- TOP 3 MENU -->
+<section class="content">
+    <h2>Top 3 Algorithms (Confidence-Based)</h2>
+    <div id="topAlgorithms" class="top-algo-menu"></div>
+</section>
+
+<!-- Leaflet -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Project JS -->
+<script src="script.js"></script>
+</body>
+</html>

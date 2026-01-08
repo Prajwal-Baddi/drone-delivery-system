@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Project Overview</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">🚁 Drone Delivery System</div>
+
+    <div class="nav-strip">
+        <a href="index.html">🏠 Home</a>
+        <a href="overview.html">📘 Overview</a>
+        <a href="algorithms.html">📊 Algorithms</a>
+        <a href="reflections.html">🧠 Reflections</a>
+        <a href="sdgs.html">🌍 SDGs</a>
+        <a href="demo.html" class="primary">🚀 Live Demo</a>
+    </div>
+</nav>
+
+
+
+<section class="content">
+
+    <h1>Project Overview</h1>
+
+    <h2>The Problem</h2>
+    <p>
+        The rapid growth of e-commerce and same-day delivery services has created
+        a strong demand for faster, more efficient, and environmentally friendly
+        logistics solutions. Traditional ground-based delivery systems are often
+        limited by traffic congestion, fuel costs, and infrastructure constraints.
+    </p>
+
+    <p>
+        Autonomous drone delivery systems provide a promising alternative, but
+        introduce complex challenges related to route planning and decision-making.
+        A drone delivery network may contain multiple delivery locations with
+        varying distances and spatial distributions.
+    </p>
+
+    <p>
+        Choosing a single routing algorithm for all scenarios is inefficient,
+        as different algorithms perform optimally under different network
+        conditions. Small networks benefit from lightweight traversal algorithms,
+        while larger or denser networks require more advanced shortest-path
+        techniques.
+    </p>
+
+    <p>
+        Furthermore, many routing systems lack explainability, making it difficult
+        to justify why a particular algorithm was selected. This reduces trust and
+        adaptability in autonomous systems.
+    </p>
+
+    <p>
+        The primary challenge addressed by this project is to design an adaptive,
+        intelligent, and explainable routing system capable of dynamically selecting
+        the most suitable algorithm for drone delivery operations.
+    </p>
+
+    <h2>The Solution</h2>
+    <p>
+        This project introduces an AI-driven drone delivery system that models
+        delivery locations as a weighted graph. The system evaluates multiple graph
+        algorithms simultaneously and assigns each a competitive score based on
+        network characteristics such as size, density, and spatial spread.
+    </p>
+
+    <p>
+        Instead of relying on a fixed algorithm, the system dynamically selects
+        the most appropriate routing strategy. The selected route is visualized
+        on an interactive map, and a drone animation simulates real-world delivery.
+    </p>
+
+    <h2>Key Features</h2>
+    <ul>
+        <li><strong>Multi-Algorithm Evaluation:</strong> Compares 12 routing algorithms dynamically.</li>
+        <li><strong>AI-Based Decision Making:</strong> Selects algorithms based on network characteristics.</li>
+        <li><strong>Explainable Recommendations:</strong> Clearly explains why an algorithm is chosen.</li>
+        <li><strong>Interactive Visualization:</strong> Displays routes and simulates drone movement.</li>
+        <li><strong>Scalable Design:</strong> Can be extended with constraints like battery and weather.</li>
+    </ul>
+
+</section>
+<script src="script.js"></script>
+</body>
+</html>
