@@ -946,3 +946,30 @@ main, header, footer {
 body::before {
     z-index: 0;
 }
+
+/* ===================== CONTROL CENTER SELECT FIX ===================== */
+.control-card select {
+    background: rgba(0, 20, 30, 0.95);
+    color: #eaf6ff;
+    border: 1px solid rgba(0, 242, 255, 0.35);
+    padding: 10px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+/* Dropdown options */
+.control-card select option {
+    background: #061821;   /* dark background */
+    color: #eaf6ff;        /* readable text */
+    font-size: 0.95rem;
+}
+
+/* Hover / selected option */
+.control-card select option:hover,
+.control-card select option:checked {
+    background: #00f2ff;
+    color: #001018;
+}
+
